@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*Builder, Singleton*/
+/*Builder, Singleton, Observer*/
 // Create log about 1 event
 
 namespace Patterns
