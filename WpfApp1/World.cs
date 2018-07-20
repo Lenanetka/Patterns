@@ -16,6 +16,8 @@ namespace Patterns
     }
     class World
     {
+        int age = 0;
+        WorldState state = WorldState.Stagnation;
         List<Hamster> hamsters;
         List<Hamster> cemetery;
     }
