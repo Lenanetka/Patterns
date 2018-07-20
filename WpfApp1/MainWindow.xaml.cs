@@ -13,7 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+/*Observer*/
+//Wait on creating log and add new log to textblock
+
+namespace Patterns
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +26,11 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void buttonNext_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
