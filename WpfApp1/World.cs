@@ -36,20 +36,32 @@ namespace Patterns
             ageIterator(10);
             nextStateRandom();
         }
-        public delegate void newGovernment(string king, string queen);
-        public event newGovernment OnNewGovernment;
+
+        public delegate void OnRandomEvent (string message);
+        public event OnRandomEvent newRandomEvent;
+        private void randomEvent()
+        {
+            string[,] events = new string[,] { 
+            { "Погода хорошая", "Популяция хомячков возросла", "Оглашение всемирного дня добра" },
+            { "Случился всемирный потоп", "Грянул гром", "Уровень преступности возрос" },
+            { "Критический уровень недовольства населения", "Подпольная организация вступила в дело", "Правительство бежало" }
+            };
+            newRandomEvent(events[(int)state, new Random().Next(0, 2)]);
+        }
+        public delegate void OnNewGovernment(string king, string queen);
+        public event OnNewGovernment newGovernmentEvent;
         private void coupDetat()
         {
             king = Government.newKing();
             queen = Government.newQueen();
-            OnNewGovernment(king.name, queen.name);
+            newGovernmentEvent(king.name, queen.name);
         }
-        public delegate void nextAge(int age);
-        public event nextAge OnNextAge;
+        public delegate void OnNextAge(int age);
+        public event OnNextAge nextAgeEvent;
         private void ageIterator(int step)
         {
             age += step;
-            OnNextAge(age);
+            nextAgeEvent(age);
         }
         private int nextStateChance = 0;
         private static WorldState[,] nextState=new WorldState[,]
@@ -58,24 +70,36 @@ namespace Patterns
             { WorldState.Stagnation,    WorldState.DarkAge,     WorldState.CoupDetat }, //no changes
             { WorldState.DarkAge,       WorldState.CoupDetat,       WorldState.Stagnation } //next
         };
-        public delegate void nextWorldStateEvent(WorldState nextState);
-        public event nextWorldStateEvent OnNextWorldState;
+        public delegate void OnNextWorldState(WorldState nextState);
+        public event OnNextWorldState nextWorldStateEvent;
         private void nextStateRandom()
         {
             Random rnd = new Random();
             int next = rnd.Next(1, 101);
-            if (next <= nextStateChance) next = 0;
-            else next = 1;
-
-            nextStateChance += 20;
-
+            if (next <= nextStateChance) next = 1;
+            else next = 0;
+            
             state = nextState[next, (int)state];
             if (next == 1)
             {
                 nextStateChance = 0;
-                OnNextWorldState(state);
+                nextWorldStateEvent(state);
                 if (state == WorldState.CoupDetat) coupDetat();
             }
+            switch (state)
+            {
+                case WorldState.Stagnation:
+                    nextStateChance += 10;
+                    break;
+                case WorldState.DarkAge:
+                    nextStateChance += 25;
+                    break;
+                case WorldState.CoupDetat:
+                    nextStateChance += 100;
+                    break;
+            }
+
+            randomEvent();
         }
     }
 }

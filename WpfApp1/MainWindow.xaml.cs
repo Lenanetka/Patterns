@@ -31,15 +31,18 @@ namespace Patterns
             logBuilder = new LogBuilder();
             world = World.Instance();
 
-            world.OnNextWorldState += logBuilder.newEra;
-            logBuilder.OnNewEraEvent += log;
+            world.nextWorldStateEvent += logBuilder.newEra;
+            logBuilder.newEraEvent += log;
 
-            world.OnNextAge += logBuilder.setCurrentAge;
-            world.OnNextAge += setAge;
+            world.nextAgeEvent += logBuilder.setCurrentAge;
+            world.nextAgeEvent += setAge;
 
-            world.OnNewGovernment += logBuilder.newGovernment;
-            logBuilder.OnNewGovernment += newGovernment;
-            world.OnNewGovernment += newKingQueen;
+            world.newGovernmentEvent += logBuilder.newGovernment;
+            logBuilder.newGovernmentEvent += newGovernment;
+            world.newGovernmentEvent += newKingQueen;
+
+            world.newRandomEvent += logBuilder.randomEvent;
+            logBuilder.newRandomEvent += randomEvent;
 
             OnNext += world.nextYear;
         }
@@ -57,6 +60,10 @@ namespace Patterns
             labelQueen.Content = queen;
         }
         private void newGovernment(string message)
+        {
+            textLog.Text += message + "\n";
+        }
+        private void randomEvent(string message)
         {
             textLog.Text += message + "\n";
         }

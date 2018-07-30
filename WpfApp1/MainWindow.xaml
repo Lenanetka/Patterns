@@ -15,9 +15,9 @@
             <Label x:Name="labelKing" Content="Король" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="26" Width="77" RenderTransformOrigin="0.429,1.692"/>
             <Label x:Name="labelQueen" Content="Королева" HorizontalAlignment="Left" Margin="308,38,0,0" VerticalAlignment="Top" Height="26" Width="78"/>
         </Grid>
-        <TextBlock x:Name="textLog" Margin="30,0,30,30" TextWrapping="Wrap" Height="519" VerticalAlignment="Bottom"/>
-        <Button x:Name="buttonNext" Content="Следующий год" HorizontalAlignment="Left" Margin="838,94,0,0" VerticalAlignment="Top" Width="144" Click="buttonNext_Click"/>
+        <Button x:Name="buttonNext" Content="Дальше" HorizontalAlignment="Left" Margin="838,94,0,0" VerticalAlignment="Top" Width="144" Click="buttonNext_Click"/>
         <Label x:Name="labelYear" Content="0 г." HorizontalAlignment="Left" Margin="645,68,0,0" VerticalAlignment="Top" Width="537" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="textLog" Height="576" Margin="30,135,29.6,0" TextWrapping="Wrap" VerticalAlignment="Top" ScrollViewer.CanContentScroll="True" IsReadOnly="True"/>
 
     </Grid>
 </Window>

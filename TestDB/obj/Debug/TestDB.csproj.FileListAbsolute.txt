@@ -1,0 +1,10 @@
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\bin\Debug\TestDB.exe.config
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\bin\Debug\TestDB.exe
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\bin\Debug\TestDB.pdb
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\bin\Debug\DatabaseConnection.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\bin\Debug\DatabaseConnection.pdb
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\obj\Debug\TestDB.csprojAssemblyReference.cache
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\obj\Debug\TestDB.csproj.CoreCompileInputs.cache
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\obj\Debug\TestDB.csproj.CopyComplete
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\obj\Debug\TestDB.exe
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\TestDB\obj\Debug\TestDB.pdb

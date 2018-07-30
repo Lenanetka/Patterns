@@ -1,0 +1,15 @@
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\bin\Debug\Patterns.exe.config
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\bin\Debug\Patterns.exe
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\bin\Debug\Patterns.pdb
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns.csprojAssemblyReference.cache
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\MainWindow.g.cs
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\App.g.cs
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns_MarkupCompile.cache
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns_MarkupCompile.lref
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\MainWindow.baml
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns.g.resources
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns.Properties.Resources.resources
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns.csproj.GenerateResource.cache
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns.csproj.CoreCompileInputs.cache
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns.exe
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\WpfApp1\obj\Debug\Patterns.pdb

@@ -1,0 +1,6 @@
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\DatabaseConnection\bin\Debug\DatabaseConnection.dll
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\DatabaseConnection\bin\Debug\DatabaseConnection.pdb
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\DatabaseConnection\obj\Debug\DatabaseConnection.csprojAssemblyReference.cache
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\DatabaseConnection\obj\Debug\DatabaseConnection.csproj.CoreCompileInputs.cache
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\DatabaseConnection\obj\Debug\DatabaseConnection.dll
+c:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\DatabaseConnection\obj\Debug\DatabaseConnection.pdb

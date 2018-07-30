@@ -1,0 +1,15 @@
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\HTTPRequest.dll.config
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\HTTPRequest.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\HTTPRequest.pdb
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\obj\Debug\HTTPRequest.csproj.App.config
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\obj\Debug\HTTPRequest.csprojAssemblyReference.cache
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\obj\Debug\HTTPRequest.csproj.CoreCompileInputs.cache
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\obj\Debug\HTTPRequest.csproj.CopyComplete
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\obj\Debug\HTTPRequest.dll
+C:\Users\Andersen\Documents\Visual Studio 2017\Projects\Patterns\HTTPRequest\obj\Debug\HTTPRequest.pdb
