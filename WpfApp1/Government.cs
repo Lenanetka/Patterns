@@ -15,24 +15,28 @@ namespace Patterns
         }
         private static Government king;
         private static Government queen;
+        private static string generateName(string prefix)
+        {
+            return prefix + "#" + new Random().Next(1, 10001));
+        }
         public static Government getKing()
         {
-            if (king == null) king = new Government("King#" + new Random().Next(1, 10001));
+            if (king == null) king = new Government(generateName("King"));
             return king;
         }
         public static Government getQueen()
         {
-            if (queen == null) queen = new Government("Queen#" + new Random().Next(1, 10001));
+            if (queen == null) queen = new Government(generateName("Queen"));
             return queen;
         }
         public static Government newKing()
         {
-            king = new Government("King#" + new Random().Next(1, 10001));
+            king = new Government(generateName("King"));
             return king;
         }
         public static Government newQueen()
         {
-            queen = new Government("Queen#" + new Random().Next(1, 10001));
+            queen = new Government(generateName("Queen"));
             return queen;
         }
     }

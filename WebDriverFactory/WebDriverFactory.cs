@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -14,13 +10,14 @@ namespace WebDriverFactory
 {
     public class WebDriverFactory
     {
+        private static string[] browser_types = { "chrome", "firefox", "edge", "IE", "opera" };
         public IWebDriver getDriver(string browser)
         {
-            if (browser == "chrome") return new ChromeDriver();
-            if (browser == "firefox") return new FirefoxDriver();
-            if (browser == "edge") return new EdgeDriver();
-            if (browser == "IE") return new InternetExplorerDriver();
-            if (browser == "opera") return new OperaDriver();
+            if (browser == browser_types[0]) return new ChromeDriver();
+            if (browser == browser_types[1]) return new FirefoxDriver();
+            if (browser == browser_types[2]) return new EdgeDriver();
+            if (browser == browser_types[3]) return new InternetExplorerDriver();
+            if (browser == browser_types[4]) return new OperaDriver();
             return null;
         }
         public List<IWebDriver> getDrivers(List<string> browsers)
@@ -29,11 +26,11 @@ namespace WebDriverFactory
             foreach(string browser in browsers)
             {
                 IWebDriver driver;
-                if (browser == "chrome") driver = new ChromeDriver();
-                else if (browser == "firefox") driver = new FirefoxDriver();
-                else if (browser == "edge") driver = new EdgeDriver();
-                else if (browser == "IE") driver = new InternetExplorerDriver();
-                else if (browser == "opera") driver = new OperaDriver();
+                if (browser == browser_types[0]) driver = new ChromeDriver();
+                else if (browser == browser_types[1]) driver = new FirefoxDriver();
+                else if (browser == browser_types[2]) driver = new EdgeDriver();
+                else if (browser == browser_types[3]) driver = new InternetExplorerDriver();
+                else if (browser == browser_types[4]) driver = new OperaDriver();
                 else driver = null;
                 drivers.Add(driver);
             }         
