@@ -17,7 +17,7 @@ namespace Patterns
         private static Government queen;
         private static string generateName(string prefix)
         {
-            return prefix + "#" + new Random().Next(1, 10001));
+            return prefix + "#" + new Random((int)DateTime.Now.Ticks).Next(1, 10001);
         }
         public static Government getKing()
         {

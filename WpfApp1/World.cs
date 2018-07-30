@@ -74,7 +74,7 @@ namespace Patterns
         public event OnNextWorldState nextWorldStateEvent;
         private void nextStateRandom()
         {
-            Random rnd = new Random();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
             int next = rnd.Next(1, 101);
             if (next <= nextStateChance) next = 1;
             else next = 0;
