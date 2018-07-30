@@ -5,20 +5,68 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*Singleton, State*/
-//World can change it's state: economic crisis, golden age, dark age, period of stagnation, coup d'etat
-//Generating evants depends on current state
 
 namespace Patterns
 {
-    enum WorldState
+    public enum WorldState
     {
-        Stagnation, EconomicCrisis, GoldenAge, DarkAge, CoupDetat
+        Stagnation, DarkAge, CoupDetat
     }
-    class World
+    public class World
     {
-        int age = 0;
+        int age;
         WorldState state = WorldState.Stagnation;
-        List<Hamster> hamsters;
-        List<Hamster> cemetery;
+        private static World instance;
+        private World()
+        {
+            age = 0;
+            state = WorldState.Stagnation;
+        }
+        public static World Instance()
+        {
+            if (instance == null) instance = new World();
+            return instance;
+        }
+        public void nextYear()
+        {
+            ageIterator(10);
+            nextStateRandom();
+        }
+        public void coupDetat()
+        {
+
+        }
+        public delegate void nextAge(int age);
+        public event nextAge OnNextAge;
+        private void ageIterator(int step)
+        {
+            age += step;
+            OnNextAge(age);
+        }
+        private int nextStateChance = 0;
+        private static WorldState[,] nextState=new WorldState[,]
+            //Stagnation,               DarkAge,                CoupDetat - current
+        { 
+            { WorldState.Stagnation,    WorldState.DarkAge,     WorldState.CoupDetat }, //no changes
+            { WorldState.DarkAge,       WorldState.CoupDetat,       WorldState.Stagnation } //next
+        };
+        public delegate void nextWorldStateEvent(WorldState nextState);
+        public event nextWorldStateEvent OnNextWorldState;
+        private void nextStateRandom()
+        {
+            Random rnd = new Random();
+            int next = rnd.Next(1, 101);
+            if (next <= nextStateChance) next = 0;
+            else next = 1;
+
+            nextStateChance += 20;
+
+            state = nextState[next, (int)state];
+            if (next == 1)
+            {
+                nextStateChance = 0;
+                OnNextWorldState(state);
+            }
+        }
     }
 }

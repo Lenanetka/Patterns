@@ -23,14 +23,35 @@ namespace Patterns
     /// </summary>
     public partial class MainWindow : Window
     {
+        private World world;
+        private LogBuilder logBuilder;
         public MainWindow()
         {
             InitializeComponent();
-        }
+            logBuilder = new LogBuilder();
+            world = World.Instance();
 
+            world.OnNextWorldState += logBuilder.newEra;
+            logBuilder.OnNewEraEvent += log;
+
+            world.OnNextAge += logBuilder.setCurrentAge;
+            world.OnNextAge += setAge;
+
+            OnNext += world.nextYear;
+        }
+        private void log(string message)
+        {
+            textLog.Text += message + "\n";
+        }
+        private void setAge(int age)
+        {
+            labelYear.Content = age + " г. н.э.";
+        }
+        public delegate void method();
+        public event method OnNext;
         private void buttonNext_Click(object sender, RoutedEventArgs e)
         {
-
+            OnNext();
         }
     }
 }

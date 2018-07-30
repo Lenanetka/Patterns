@@ -12,23 +12,12 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="labelKing" Content="Король" HorizontalAlignment="Left" Margin="253,10,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
-            <Label x:Name="labelLordHo" Content="Лорд Хо" Margin="20,50,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="140"/>
-            <Label x:Name="labelLordMya" Content="Лорд Мя" Margin="165,50,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="140"/>
-            <Label x:Name="labelLordChi" Content="Лорд Чи" Margin="310,50,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="140"/>
-            <Label x:Name="labelLordNa" Content="Лорд На" Margin="455,50,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="140"/>
+            <Label x:Name="labelKing" Content="Король" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="26" Width="77" RenderTransformOrigin="0.429,1.692"/>
+            <Label x:Name="labelQueen" Content="Королева" HorizontalAlignment="Left" Margin="308,38,0,0" VerticalAlignment="Top" Height="26" Width="78"/>
         </Grid>
-
-        <ListView x:Name="listHamsters" Margin="30,0,552,30" Height="519" VerticalAlignment="Bottom">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <TextBlock x:Name="textLog" Margin="669,0,30,30" TextWrapping="Wrap" Text="События" Height="519" VerticalAlignment="Bottom"/>
-        <Button x:Name="buttonNext" Content="Следующий год" HorizontalAlignment="Left" Margin="838,101,0,0" VerticalAlignment="Top" Width="144" Click="buttonNext_Click"/>
-        <Label x:Name="labelYear" Content="0 г." HorizontalAlignment="Left" Margin="899,66,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textLog" Margin="30,0,30,30" TextWrapping="Wrap" Height="519" VerticalAlignment="Bottom"/>
+        <Button x:Name="buttonNext" Content="Следующий год" HorizontalAlignment="Left" Margin="838,94,0,0" VerticalAlignment="Top" Width="144" Click="buttonNext_Click"/>
+        <Label x:Name="labelYear" Content="0 г." HorizontalAlignment="Left" Margin="645,68,0,0" VerticalAlignment="Top" Width="537" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Window>
