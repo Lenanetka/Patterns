@@ -17,10 +17,14 @@ namespace Patterns
         int age;
         WorldState state = WorldState.Stagnation;
         private static World instance;
+        private static Government king;
+        private static Government queen;
         private World()
         {
             age = 0;
             state = WorldState.Stagnation;
+            king = Government.getKing();
+            queen = Government.getQueen();
         }
         public static World Instance()
         {
@@ -32,9 +36,13 @@ namespace Patterns
             ageIterator(10);
             nextStateRandom();
         }
-        public void coupDetat()
+        public delegate void newGovernment(string king, string queen);
+        public event newGovernment OnNewGovernment;
+        private void coupDetat()
         {
-
+            king = Government.newKing();
+            queen = Government.newQueen();
+            OnNewGovernment(king.name, queen.name);
         }
         public delegate void nextAge(int age);
         public event nextAge OnNextAge;
@@ -66,6 +74,7 @@ namespace Patterns
             {
                 nextStateChance = 0;
                 OnNextWorldState(state);
+                if (state == WorldState.CoupDetat) coupDetat();
             }
         }
     }

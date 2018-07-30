@@ -24,11 +24,18 @@ namespace Patterns
             string message = currentAge.ToString("D4") + ": Новая эра: ";
             switch (nextState)
             {
-                case WorldState.Stagnation: message += "Всё спокойно"; break;
+                case WorldState.Stagnation: message += "Застой"; break;
                 case WorldState.DarkAge: message += "Тёмные века"; break;
                 case WorldState.CoupDetat: message += "Государственный переворот"; break;
             }
             OnNewEraEvent(message);
-        }        
+        }
+        public delegate void newGovernmentEvent(string message);
+        public event newGovernmentEvent OnNewGovernment;
+        public void newGovernment(string king, string queen)
+        {
+            string message = currentAge.ToString("D4") + ": Новое правительство: король " + king + " и королева " + queen;
+            OnNewGovernment(message);
+        }
     }
 }

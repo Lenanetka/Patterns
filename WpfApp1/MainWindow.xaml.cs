@@ -37,6 +37,10 @@ namespace Patterns
             world.OnNextAge += logBuilder.setCurrentAge;
             world.OnNextAge += setAge;
 
+            world.OnNewGovernment += logBuilder.newGovernment;
+            logBuilder.OnNewGovernment += newGovernment;
+            world.OnNewGovernment += newKingQueen;
+
             OnNext += world.nextYear;
         }
         private void log(string message)
@@ -46,6 +50,15 @@ namespace Patterns
         private void setAge(int age)
         {
             labelYear.Content = age + " г. н.э.";
+        }
+        public void newKingQueen(string king, string queen)
+        {
+            labelKing.Content = king;
+            labelQueen.Content = queen;
+        }
+        private void newGovernment(string message)
+        {
+            textLog.Text += message + "\n";
         }
         public delegate void method();
         public event method OnNext;
